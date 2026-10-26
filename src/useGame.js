@@ -29,7 +29,7 @@ export function useGame() {
     if (action === 'heartbreak' && next.current.hearts === 0) setReflection(true);
     const levelUp = levelOf(next.current.totalXp) > levelOf(before.current.totalXp);
     const showEffect = () => {
-      setEffect(['undo','heartbreak'].includes(action) ? null : { id: ++sequence.current, type: levelUp ? 'level' : action, level: levelOf(next.current.totalXp) });
+      setEffect(action === 'undo' ? null : { id: ++sequence.current, type: levelUp ? 'level' : action, level: levelOf(next.current.totalXp) });
       later(() => setEffect(null),2200);
     };
     latest.current = next;
@@ -44,12 +44,14 @@ export function useGame() {
       const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       later(() => setEncounter({boss,phase:'strike'}), reduced ? 100 : 1200);
       later(() => setEncounter({boss,phase:'stars'}), reduced ? 200 : 2700);
+      later(() => setEncounter({boss,phase:'chest'}), reduced ? 250 : 3200);
+      later(() => setEncounter({boss,phase:'open'}), reduced ? 350 : 3800);
       later(() => {
         setEncounter(null); locked.current=false;
         setReward(boss);
         setMessage('Interview complete. You showed up. +30 XP, a new weapon, and a desk keepsake.');
         showEffect();
-      },reduced ? 400 : 4000);
+      },reduced ? 600 : 4900);
     } else {
       showEffect();
       setMessage(action === 'apply' ? '+10 XP · One more door knocked on.' : action === 'prepare' ? `Weapon reinforced to +${next.current.reinforcement}. You are getting ready.` : action === 'heartbreak' ? 'A hard moment, not a measure of your worth. Your progress is still here.' : 'Last action undone. Your progress is restored.');

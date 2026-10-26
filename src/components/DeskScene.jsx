@@ -1,10 +1,21 @@
 import Stationery from './Stationery.jsx';
 import { CATALOG } from '../catalog.js';
 const pixels = [
-'....hhhhhh......','...hhhhhhhh.....','...hsssphhh.....','...hsssssh......','....ssssss......','.....ssss.......','....gggggg......','...gggggggg.....','...sggggggs.....','...sggggggs.....','....gggggg......','....pppppp......','....pp..pp......','....pp..pp......','...bbb..bbb.....',
+'....hhhhhh......','...hhhhhhhh.....','..hhhhhhhrrh....','..hhssssehh.....','..hhssssshhh....','..hhhssshhhh....','..hhgggggghh....','...gggggggg.....','...sggggggs.....','...sggggggs.....','....gggggg......','...gggggggg.....','...gggggggg.....','....ll..ll......','....ll..ll......','...bbb..bbb.....',
 ];
-const colors = { h:'#443b34',s:'#e7b48a',p:'#4d5149',g:'#73856c',b:'#423d33' };
-function Character({ weaponId }) { return <svg viewBox="0 0 16 16" className="character-sprite" aria-hidden="true" shapeRendering="crispEdges">{pixels.flatMap((row,y)=>[...row].map((p,x)=>colors[p] ? <rect key={`${x}-${y}`} x={x} y={y} width="1" height="1" fill={colors[p]}/> : null))}<rect x="14" y="7" width="1" height="7" fill={{starter:'#a7774f',eraser:'#ce87a5',stapler:'#7d9d8e',sharpener:'#cba15b'}[weaponId]}/><rect x="12" y="10" width="4" height="1" fill="#65523b"/></svg>; }
+const colors = { h:'#574034',s:'#ebc3a3',e:'#423c32',r:'#c28b92',g:'#8eaa81',l:'#e6d8bd',b:'#685144' };
+export function Character({ weaponId = 'starter', avatar = false }) { return <svg viewBox="0 0 16 16" className={avatar ? 'avatar-sprite' : 'character-sprite'} aria-hidden="true" shapeRendering="crispEdges">{pixels.flatMap((row,y)=>[...row].map((p,x)=>colors[p] ? <rect key={`${x}-${y}`} x={x} y={y} width="1" height="1" fill={colors[p]}/> : null))}<rect x="14" y="7" width="1" height="7" fill={{starter:'#a7774f',eraser:'#ce87a5',stapler:'#7d9d8e',sharpener:'#cba15b'}[weaponId]}/><rect x="12" y="10" width="4" height="1" fill="#65523b"/></svg>; }
+function TreasureChest({ open, boss }) {
+  return <div className={`treasure-reveal ${open ? 'chest-is-open' : ''}`} role="status" aria-label={open ? `Treasure chest opened: ${boss.weapon}` : 'A treasure chest appears'}>
+    <div className="treasure-rays" aria-hidden="true">✧ ✦ ✧</div>
+    <svg viewBox="0 0 72 66" className="treasure-chest" aria-hidden="true" shapeRendering="crispEdges">
+      <g className="chest-loot"><path d="M42 0h5v6L31 24l-5-5z" fill="#d6debb"/><path d="M25 17l9 9-3 3-9-9z" fill="#c4a052"/><path d="M23 23l5 5-6 7-5-5z" fill="#87734d"/></g>
+      <g className="chest-lid"><path d="M10 31V20h6v-5h40v5h6v11z" fill="#ae7e48"/><path d="M16 19h40v5H16z" fill="#d2a565"/><path d="M14 18h5v13h-5zm39 0h5v13h-5z" fill="#e1c078"/><path d="M10 29h52v5H10z" fill="#715638"/></g>
+      <path d="M10 33h52v26H10z" fill="#aa7846"/><path d="M14 37h44v17H14z" fill="#bd8d51"/><path d="M10 33h6v26h-6zm46 0h6v26h-6zM10 55h52v5H10z" fill="#ddbe77"/><path d="M31 30h11v15H31z" fill="#efd088"/><path d="M35 35h3v6h-3z" fill="#795d3d"/>
+    </svg>
+    <p>{open ? boss.weapon : 'A little treasure for showing up…'}</p>
+  </div>;
+}
 export default function DeskScene({ effect, encounter, collection = {}, weaponId = 'starter' }) {
   return <section className={`desk-scene ${encounter ? `in-battle phase-${encounter.phase}` : ''}`} aria-label="A pixel adventurer wandering on a quiet Japanese-inspired desk">
     <div className="scene-heading"><span className="scene-dot"/> YOUR LITTLE CORNER OF THE WORLD</div>
@@ -20,11 +31,11 @@ export default function DeskScene({ effect, encounter, collection = {}, weaponId
       <path d="M764 274h45v33h-45z" fill="#efe9d7"/><path d="M809 280h13v18h-13" fill="none" stroke="#efe9d7" strokeWidth="5"/><path d="M770 275h33v5h-33z" fill="#7d6750"/><rect x="756" y="310" width="65" height="5" fill="#b39975"/>
       <path d="M424 354h123v5H424z" fill="#b69b73"/><rect x="425" y="349" width="108" height="5" fill="#dfbd77"/><path d="M533 349h13v5h-13z" fill="#5b6557"/>
     </svg>
-    {effect && <div key={effect.id} className={`scene-reward effect-${effect.type}`} role="status">{effect.type === 'level' ? `Level Up! · Level ${effect.level}` : effect.type === 'apply' ? '+10 XP' : effect.type === 'interview' ? 'Interview complete! +30 XP' : 'Weapon reinforced +1'}</div>}
+    {effect?.type === 'heartbreak' && <div key={effect.id} className="heartbreak-effect" role="status"><div className="broken-heart" aria-hidden="true"><span>♥</span><span>♥</span></div><p>A hard moment. Your progress stays.</p></div>}
+    {effect && effect.type !== 'heartbreak' && <div key={effect.id} className={`scene-reward effect-${effect.type}`} role="status">{effect.type === 'level' ? `Level Up! · Level ${effect.level}` : effect.type === 'apply' ? '+10 XP' : effect.type === 'interview' ? 'Interview complete! +30 XP' : 'Weapon reinforced +1'}</div>}
     <div className={`character-wander ${effect?.type === 'level' ? 'level-up' : ''}`}><div className="character-bob"><Character weaponId={weaponId}/></div><div className="character-shadow"/></div>
-    {encounter && <><div className="boss-label">{encounter.phase === 'stars' ? 'YOU SHOWED UP.' : encounter.boss.name.toUpperCase()}</div><div className={`boss-sprite boss-${encounter.phase}`}><Stationery id={encounter.boss.id}/></div>{encounter.phase === 'stars' && <div className="battle-stars" aria-hidden="true">✦ · ✧ · ✦</div>}</>}
+    {encounter && <><div className="boss-label">{['stars','chest','open'].includes(encounter.phase) ? 'YOU SHOWED UP.' : encounter.boss.name.toUpperCase()}</div>{['approach','strike','stars'].includes(encounter.phase) && <div className={`boss-sprite boss-${encounter.phase}`}><Stationery id={encounter.boss.id}/></div>}{['chest','open'].includes(encounter.phase) && <TreasureChest boss={encounter.boss} open={encounter.phase === 'open'}/>}{encounter.phase === 'stars' && <div className="battle-stars" aria-hidden="true">✦ · ✧ · ✦</div>}</>}
     <div className="desk-collectibles" aria-hidden="true">{CATALOG.filter(b=>collection[b.id]).map(b=><div className="desk-collectible" key={b.id}><Stationery id={b.id}/><span>×{collection[b.id]}</span></div>)}</div>
-    <div className="scene-note"><span className="note-cross">+</span><p>Good things take little steps.</p><span>There is no rush here.</span></div>
     <div className="scene-footer"><span>DESK 01 / A NEW BEGINNING</span><span>AUTOMATIC WANDERING <i/></span></div>
   </section>;
 }

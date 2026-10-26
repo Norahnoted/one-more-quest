@@ -86,3 +86,5 @@ Activity mode: To be recorded after the wrap-up.
 - Learner requested YOUR NEXT CHAPTER, One More Quest✧, an edge-to-edge layout, a closer reference-style serif title, and a different original avatar. Updated with a pixel ranger; suggested courage instead of workstation in the subtitle because it describes the project motivation. Production build passed; mobile width checked. Final visual confirmation remains pending.
 
 - Learner specified exact typography: self-host Fraunces for the main/dialog titles and DM Sans for interface copy; replacing provisional fonts and verifying loaded font faces.
+
+- Latest learner refinements implemented: modest gutters, shared girl sprite, note removed, manual-heartbreak feedback, and post-boss treasure chest opening with a weapon reveal. Twelve tests and production build passed. Browser verified the heart effect, opened chest/weapon name, exactly one interview reward, no note, matching avatar, mobile gutters/no overflow, and no page errors. Learner retry remains pending.

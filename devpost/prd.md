@@ -128,3 +128,7 @@ The learner renamed the project One More Quest and supplied a previous design as
 Follow-up visual revision: remove outer horizontal gutters, use YOUR NEXT CHAPTER and One More Quest✧, tune title to a high-contrast serif treatment, and replace the reference-inspired avatar with an original pixel ranger. Subtitle currently uses the suggested wording “A little courage. A little progress. One more day.”; learner confirmation remains pending. Exact source font is not known from the screenshot; local Baskerville/Times fallbacks approximate its character.
 
 Typography finalized by the learner: Fraunces for the main title and dialog titles; DM Sans for body copy, buttons, level/XP, and scene labels. Self-host variable font assets through Fontsource packages with their OFL licenses; replace the earlier provisional Baskerville/system-font approximation.
+
+## Latest Interaction Polish
+
+Learner requested modest horizontal gutters, a girl adventurer, no desk sticky note, heartbreak feedback, and a chest-opening weapon reveal after boss battles. Implemented 40px desktop/18px mobile padding, a shared original long-haired girl sprite for the avatar and scene, removal of the note, a splitting-heart/soft pulse effect, and chest arrival/open/weapon reveal phases within an approximately 4.9-second encounter. Reduced motion uses a shortened quiet sequence. Rewards still commit once at click time; no new reward transaction or save data is added for animation.

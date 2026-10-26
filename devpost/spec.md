@@ -199,3 +199,7 @@ Implementation files added within the approved component boundaries: `Stationery
 Rename visible branding to One More Quest; keep the existing localStorage key to retain saves. Rebuild ProgressPanel with an original inline avatar, character name/level, current and total XP, and hearts. Reference the supplied image only for that status bar, typography, and ivory/sage/dusty-rose palette. Use Georgia for the main title and a readable local sans-serif stack for interface copy. Retain existing gameplay, desk scene, and application structure; add none of the reference app's unrelated features.
 
 Typography finalized by the learner: Fraunces for the main title and dialog titles; DM Sans for body copy, buttons, level/XP, and scene labels. Self-host variable font assets through Fontsource packages with their OFL licenses; replace the earlier provisional Baskerville/system-font approximation.
+
+## Latest Interaction Polish
+
+Learner requested modest horizontal gutters, a girl adventurer, no desk sticky note, heartbreak feedback, and a chest-opening weapon reveal after boss battles. Implemented 40px desktop/18px mobile padding, a shared original long-haired girl sprite for the avatar and scene, removal of the note, a splitting-heart/soft pulse effect, and chest arrival/open/weapon reveal phases within an approximately 4.9-second encounter. Reduced motion uses a shortened quiet sequence. Rewards still commit once at click time; no new reward transaction or save data is added for animation.

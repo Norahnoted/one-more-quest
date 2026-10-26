@@ -3,7 +3,7 @@ doc: scope
 status: approved
 ---
 
-# One More Chance
+# One More Quest
 
 A lightweight, English-language pixel-art web app that turns job-search actions into character growth and desktop collectibles.
 

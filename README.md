@@ -1,4 +1,4 @@
-# One More Chance
+# One More Quest
 
 A small pixel desk adventure that makes job-search effort visible. Built with React, Vite, Tailwind CSS, and browser-local saves.
 
@@ -29,11 +29,11 @@ Open the deployment URL reported by the Actions run, normally `https://<owner>.g
 To check a repository-style build locally:
 
 ```sh
-BASE_PATH=/one-more-chance/ npm run build
-BASE_PATH=/one-more-chance/ npm run preview -- --host 127.0.0.1 --port 4173
+BASE_PATH=/one-more-quest/ npm run build
+BASE_PATH=/one-more-quest/ npm run preview -- --host 127.0.0.1 --port 4173
 ```
 
-Open `http://127.0.0.1:4173/one-more-chance/`. For a normal local build, omit BASE_PATH.
+Open `http://127.0.0.1:4173/one-more-quest/`. For a normal local build, omit BASE_PATH.
 
 ## Demo and behavior checks
 
@@ -42,3 +42,5 @@ Show an application gaining XP, preparation strengthening the weapon, an automat
 A short demo video and the public GitHub repository are required submission materials. The playable Pages URL is additional. Record using a separate browser profile if you want a clean demonstration without changing your personal save.
 
 See `devpost/prd.md` and `devpost/spec.md` for requirements and implementation decisions. Rule values are centralized in `src/game.js`; the stationery catalog is in `src/catalog.js`. Artwork is original code-built SVG/CSS. No application forms, accounts, external fonts, or runtime API calls are required.
+
+The internal save key retains the original project identifier so the rename to One More Quest preserves existing progress.

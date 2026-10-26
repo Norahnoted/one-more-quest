@@ -3,7 +3,7 @@ doc: checklist
 status: approved
 ---
 
-# One More Chance — Build Checklist
+# One More Quest — Build Checklist
 
 Build mode: fast
 
@@ -29,7 +29,7 @@ Build mode: fast
   Learner check: Prepare twice, complete an interview, inspect the weapon and keepsake, then refresh during another battle and undo the record.
   Commit: `Add automatic stationery encounters and persistent interview rewards`
 
-- [ ] **3. Hearts support an open ending and the app is ready for Pages**
+- [x] **3. Hearts support an open ending and the app is ready for Pages**
   Becomes usable: Manual heartbreaks lead to a dismissible reflection at zero hearts; progress remains intact and usable. Production files and a Pages deployment workflow are ready.
   Why now: Completes the emotional boundary and the full demonstration, then validates the integrated app before publishing.
   PRD ref: `prd.md > Hearts and Open Ending`, `Confirmed Interaction Boundaries`, `States and Boundaries`, `What We're Building`
@@ -39,7 +39,7 @@ Build mode: fast
   Learner check: Explore the whole app freely, including three heartbreaks, closing the ending, continuing, refreshing, and Undo; report broken, confusing, or unwanted behavior.
   Commit: `Complete open-ended hearts journey and prepare GitHub Pages deployment`
 
-Slice 1 verification: six Node tests passed; production build passed with Vite 8.3.5; browser verified level-up, preparation, persistence, one-step Undo, automatic wandering, no page errors, and no horizontal overflow at 390px. Early learner feedback requested larger text, a brighter cherry-soda palette, reordered actions, distinct level/weapon feedback, and a count-only daily tracker; revisions are being verified before the checkpoint commit.
+Slice 1 verification: six Node tests passed; production build passed with Vite 8.3.5; browser verified level-up, preparation, persistence, one-step Undo, automatic wandering, no page errors, and no horizontal overflow at 390px. Early learner feedback requested larger text, a brighter cherry-soda palette, reordered actions, distinct level/weapon feedback, and a count-only daily tracker; revisions passed verification and were committed as e50580e.
 
 ## Hands-on Checkpoints
 
@@ -49,6 +49,9 @@ Slice 1 verification: six Node tests passed; production build passed with Vite 8
 Learn mode additionally uses each slice's learner check. Fast mode pauses at the two planned checkpoints unless an additional useful issue requires feedback.
 
 ## Final Review
+
+- [ ] Learner explores the completed interview/hearts journey and reports final feedback
+- [ ] Final palette review requested by learner
 
 - [ ] Final review complete — feedback resolved and learner confirms ready to ship
 
@@ -77,3 +80,5 @@ Activity mode: To be recorded after the wrap-up.
 - Production preview of a repository-style build must use the same BASE_PATH as the build; the initial preview used the root base and returned a missing script. README corrected and matching-path preview rechecked.
 
 - Slice 3 verification: all 12 tests passed. Browser verified third-heartbreak dialog, both reflective directions, Escape/close focus, zero-heart recording, no forced reopening on refresh, full heart Undo, reduced motion, and narrow layout. Production repository-path preview loaded assets and preserved XP with no failures. Browser storage write failure showed an unsaved warning; invalid saves remained intact and actions were blocked. Public deployment awaits shipping.
+
+- Final visual request: rename to One More Quest, reference only the supplied status bar/typography/colors, and preserve all gameplay and saves. Earlier cherry-soda palette is superseded. Rechecking this limited visual revision.

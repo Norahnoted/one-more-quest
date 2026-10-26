@@ -3,7 +3,7 @@ doc: spec
 status: approved
 ---
 
-# One More Chance — Technical Spec
+# One More Quest — Technical Spec
 
 ## How This Works, In Plain Language
 
@@ -193,3 +193,7 @@ Add `daily: { [localDate]: { apply, prepare, interview } }` to each progress sna
 Carry the approved cherry-soda visual revision into Tailwind/custom CSS. Use readable 14–16px body text with larger action labels and a light, untextured background. The page order is progress, actions, scene, weapon panel, daily counts, keepsakes. Palette and layout were approved during the first learner check.
 
 Implementation files added within the approved component boundaries: `Stationery.jsx` supplies shared original boss/collectible art; `Collection.jsx` renders counted keepsakes. Equipped weapon colors vary by catalog identity.
+
+## Final Visual Reference Revision
+
+Rename visible branding to One More Quest; keep the existing localStorage key to retain saves. Rebuild ProgressPanel with an original inline avatar, character name/level, current and total XP, and hearts. Reference the supplied image only for that status bar, typography, and ivory/sage/dusty-rose palette. Use Georgia for the main title and a readable local sans-serif stack for interface copy. Retain existing gameplay, desk scene, and application structure; add none of the reference app's unrelated features.

@@ -3,7 +3,7 @@ doc: prd
 status: approved
 ---
 
-# One More Chance — Product Requirements
+# One More Quest — Product Requirements
 
 An English-language pixel-art idle tracker for a job seeker who wants every effort to leave visible progress, even when applications go unanswered.
 Source: `scope.md > The Unique Kernel`, `Who It's For`.
@@ -120,3 +120,7 @@ The learner requested and confirmed these changes during the first playable revi
 - Distinguish character XP from weapon reinforcement: visible level-up announcement and character glow; a separate weapon panel with reinforcement count and upgrade flash.
 - Daily tracker: group application, preparation, and interview counts by the player's local calendar date. Keep it count-only with no company or role forms. Undo restores the corresponding daily count along with all other progress; refresh preserves counts.
 - Older saves retain existing progress, but no daily history is invented for actions predating this feature.
+
+## Final Visual Reference Revision
+
+The learner renamed the project One More Quest and supplied a previous design as reference only for the character status bar, typography, and colors. Use a compact avatar/name/level identity, XP bar with total XP, muted green text, warm ivory background, sage accents, dusty rose hearts, and a serif title with readable sans-serif interface text. Do not copy its other controls, content, integrations, or game design. The desk and approved interactions remain. This supersedes the earlier cherry-soda palette.

@@ -214,3 +214,7 @@ The learner also requested brighter colors: retain the warm ivory base and stren
 ## Offer Celebration and Compact Floating Status
 
 Learner requested a smaller main title, a compact floating full-width status bar, and an “I gooooot the offer!” button with celebration. Status is sticky above the content container with modest internal padding; the rest of the page retains its gutters. The gold offer button opens an accessible dialog with an original offer-letter illustration, star and confetti animation, and a close button. Escape closes it and focus returns to the trigger. Celebration is presentation-only: it does not add XP, change counts/hearts, reset progress, or alter the save. Respect reduced motion and disable the trigger during a boss encounter.
+
+## Floating Equipment and Light Headings
+
+Learner requested normal-weight main title and YOUR NEXT CHAPTER, a pixel-style girl status avatar, and equipment in the floating bar immediately right of XP. Reuse WeaponPanel in a compact variant inside ProgressPanel, remove its old main-content placement, retain live reinforcement feedback, and adapt the bar to narrow widths. This supersedes earlier separate equipment placement and rounded portrait styling.

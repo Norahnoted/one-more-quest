@@ -96,3 +96,5 @@ Activity mode: To be recorded after the wrap-up.
 - Browser review refinements: subtitle ends with One more chance.; removed both desk footer labels; changed manual heartbreak control to I’m feeling discouraged with a distinct button treatment; coral feedback gives a gentle setback message and remaining-heart context; enlarged section spacing. Production build and mobile browser checks passed; emotional and growth message backgrounds differ.
 
 - Added learner-requested offer celebration button/dialog, compact full-width sticky status, and smaller title. Browser verified celebration closure by Escape/button, focus restoration, unchanged save, sticky positioning, mobile/desktop no overflow, and no page errors. Production build passed. Final learner review remains pending.
+
+- Implemented browser comments: title/eyebrow weight 400, compact weapon immediately right of XP in the top bar, and original pixel girl portrait. Build passed; browser verified one equipment panel, live +1 reinforcement, correct desktop ordering, and no overflow at 1168/820/680/390/320px.

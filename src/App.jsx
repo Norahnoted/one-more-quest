@@ -5,7 +5,6 @@ import DeskScene from './components/DeskScene.jsx';
 import ProgressPanel from './components/ProgressPanel.jsx';
 import ActionBar from './components/ActionBar.jsx';
 import Feedback, { RewardCard } from './components/Feedback.jsx';
-import WeaponPanel from './components/WeaponPanel.jsx';
 import DailyTracker from './components/DailyTracker.jsx';
 import Collection from './components/Collection.jsx';
 import ReflectionDialog from './components/ReflectionDialog.jsx';
@@ -18,7 +17,6 @@ export default function App() {
     <Feedback message={game.message} warning={game.warning} tone={game.tone}/>
     <DeskScene effect={game.effect} encounter={game.encounter} weaponId={game.record.current.weaponId} collection={game.record.current.collection}/>
     <RewardCard boss={game.reward} dismiss={game.dismissReward}/>
-    <WeaponPanel progress={game.record.current} effect={game.effect}/>
     <DailyTracker daily={game.record.current.daily}/>
     <Collection collection={game.record.current.collection}/>
     <ReflectionDialog open={game.reflection} close={game.closeReflection} begin={game.act}/>

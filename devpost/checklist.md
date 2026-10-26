@@ -100,3 +100,5 @@ Activity mode: To be recorded after the wrap-up.
 - Implemented browser comments: title/eyebrow weight 400, compact weapon immediately right of XP in the top bar, and original pixel girl portrait. Build passed; browser verified one equipment panel, live +1 reinforcement, correct desktop ordering, and no overflow at 1168/820/680/390/320px.
 
 - Aligned floating-bar internal gutters with the centered main container while keeping its background full width. Build and browser checks passed; left edges match at 1456, 1168, 820, and 390px without horizontal overflow.
+
+- Learner requested another avatar revision and allowed a small logo instead of a person. Replaced status avatar with an original pixel sprout emblem and gold sparkle, keeping the desk character unchanged. Production build passed.

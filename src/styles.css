@@ -108,3 +108,5 @@ h1,.page-header .edition { font-weight:400; }
 #root>.progress-panel { padding-inline:max(48px,calc((100% - 1360px)/2 + 48px)); }
 @media(max-width:850px) { #root>.progress-panel { padding-inline:28px; } }
 @media(max-width:600px) { #root>.progress-panel { padding-inline:20px; } }
+.avatar-tile:has(.sprout-emblem) { background:#edf2df;border:1px solid #dce6c9;border-radius:14px; }.avatar-tile .sprout-emblem { width:44px;height:44px; }
+@media(max-width:600px) { .avatar-tile .sprout-emblem { width:37px;height:37px; } }

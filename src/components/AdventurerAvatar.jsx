@@ -1,15 +1,13 @@
 export default function AdventurerAvatar() {
-  return <svg className="adventurer-portrait pixel-portrait" viewBox="0 0 24 24" shapeRendering="crispEdges" aria-hidden="true">
-    <path d="M6 2h12v2h2v14H4V4h2z" fill="#684837"/>
-    <path d="M7 5h10v2h2v8h-2v3H7v-3H5V7h2z" fill="#f3cba6"/>
-    <path d="M5 5h2V3h10v2h2v3h-4V6h-3v2H9v1H5z" fill="#684837"/>
-    <path d="M7 3h9v1H7zM5 5h2v2H5z" fill="#8d6247"/>
-    <path d="M8 10h2v2H8zm6 0h2v2h-2z" fill="#503e32"/>
-    <path d="M7 13h3v1H7zm7 0h3v1h-3z" fill="#e89992"/>
-    <path d="M10 15h4v1h-4z" fill="#b97960"/>
-    <path d="M8 18h8v1h3v4H5v-4h3z" fill="#88a475"/>
-    <path d="M9 18h6l-3 3z" fill="#f5ead1"/>
-    <path d="M15 3h2v1h2V2h2v4h-3v1h-2V6h-2V3z" fill="#d893a0"/>
-    <path d="M17 4h2v2h-2z" fill="#b76f85"/>
+  return <svg className="adventurer-portrait pixel-portrait sprout-emblem" viewBox="0 0 32 32" shapeRendering="crispEdges" aria-hidden="true">
+    <path d="M6 26h20v2H6z" fill="#d4dfbd"/>
+    <path d="M15 14h3v11h-3z" fill="#6d9149"/>
+    <path d="M5 8h7v2h3v3h2v5h-6v-2H8v-3H5z" fill="#91b763"/>
+    <path d="M5 8h7v2H8v3H5z" fill="#b9d792"/>
+    <path d="M18 10h3V7h7v6h-2v3h-3v2h-6v-5h1z" fill="#6f9d50"/>
+    <path d="M21 7h7v2h-5v3h-3v2h-3v-2h2v-2h2z" fill="#a6c981"/>
+    <path d="M12 23h9v3h-9z" fill="#6d9149"/>
+    <path d="M24 2h2v2h2v2h-2v2h-2V6h-2V4h2z" fill="#d9b44d"/>
+    <path d="M4 18h2v2H4z" fill="#cf927e"/>
   </svg>;
 }

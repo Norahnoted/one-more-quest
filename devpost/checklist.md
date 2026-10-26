@@ -98,3 +98,5 @@ Activity mode: To be recorded after the wrap-up.
 - Added learner-requested offer celebration button/dialog, compact full-width sticky status, and smaller title. Browser verified celebration closure by Escape/button, focus restoration, unchanged save, sticky positioning, mobile/desktop no overflow, and no page errors. Production build passed. Final learner review remains pending.
 
 - Implemented browser comments: title/eyebrow weight 400, compact weapon immediately right of XP in the top bar, and original pixel girl portrait. Build passed; browser verified one equipment panel, live +1 reinforcement, correct desktop ordering, and no overflow at 1168/820/680/390/320px.
+
+- Aligned floating-bar internal gutters with the centered main container while keeping its background full width. Build and browser checks passed; left edges match at 1456, 1168, 820, and 390px without horizontal overflow.

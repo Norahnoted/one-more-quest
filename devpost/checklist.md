@@ -102,3 +102,5 @@ Activity mode: To be recorded after the wrap-up.
 - Aligned floating-bar internal gutters with the centered main container while keeping its background full width. Build and browser checks passed; left edges match at 1456, 1168, 820, and 390px without horizontal overflow.
 
 - Learner requested another avatar revision and allowed a small logo instead of a person. Replaced status avatar with an original pixel sprout emblem and gold sparkle, keeping the desk character unchanged. Production build passed.
+
+- At learner request and explicit public-repository confirmation, deployed to https://norahnoted.github.io/one-more-quest/ via Norahnoted/one-more-quest. History audit found no private credential/profile paths or secret-pattern matches; personal profile stayed ignored. CI passed 14 tests/build/deployment. Anonymous production smoke checks passed with no asset/page errors. Final learning wrap-up/app map and submission tasks remain separate, unfinished curriculum work.

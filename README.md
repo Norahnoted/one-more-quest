@@ -1,5 +1,7 @@
 # One More Quest
 
+[Play One More Quest](https://norahnoted.github.io/one-more-quest/) · [Source repository](https://github.com/Norahnoted/one-more-quest)
+
 A small pixel desk adventure that makes job-search effort visible. Built with React, Vite, Tailwind CSS, and browser-local saves.
 
 ## Run locally

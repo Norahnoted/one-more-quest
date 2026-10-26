@@ -218,3 +218,11 @@ Learner requested a smaller main title, a compact floating full-width status bar
 ## Floating Equipment and Light Headings
 
 Learner requested normal-weight main title and YOUR NEXT CHAPTER, a pixel-style girl status avatar, and equipment in the floating bar immediately right of XP. Reuse WeaponPanel in a compact variant inside ProgressPanel, remove its old main-content placement, retain live reinforcement feedback, and adapt the bar to narrow widths. This supersedes earlier separate equipment placement and rounded portrait styling.
+
+## Published Deployment
+
+- Public repository: https://github.com/Norahnoted/one-more-quest
+- Playable site: https://norahnoted.github.io/one-more-quest/
+- Successful Pages workflow: https://github.com/Norahnoted/one-more-quest/actions/runs/40400332770
+- Anonymous browser verification: HTTP 200; application/preparation/interview rewards, saved progress after refresh, next-chapter heart restoration, offer dialog, both fonts, and mobile layout passed. No failed asset responses or page errors observed.
+- Each visitor has an independent browser-local save. Localhost progress is not transferred to the public origin.

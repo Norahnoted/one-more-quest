@@ -143,3 +143,7 @@ The learner also requested brighter colors: retain the warm ivory base and stren
 ## Emotional Feedback and Spacing Revision
 
 Subtitle: “A little courage. A little progress. One more chance.” Remove desk footer metadata. The manual heartbreak control is labeled “I’m feeling discouraged” with a distinct button treatment rather than a like-style heart icon. Its tooltip explains that it marks one heartbreak. Use coral-toned feedback separate from green growth feedback; acknowledge a small setback and the remaining chances without forcing a decision. At zero, encourage reflection on the next chapter. Add generous section and panel spacing while retaining mobile usability.
+
+## Offer Celebration and Compact Floating Status
+
+Learner requested a smaller main title, a compact floating full-width status bar, and an “I gooooot the offer!” button with celebration. Status is sticky above the content container with modest internal padding; the rest of the page retains its gutters. The gold offer button opens an accessible dialog with an original offer-letter illustration, star and confetti animation, and a close button. Escape closes it and focus returns to the trigger. Celebration is presentation-only: it does not add XP, change counts/hearts, reset progress, or alter the save. Respect reduced motion and disable the trigger during a boss encounter.

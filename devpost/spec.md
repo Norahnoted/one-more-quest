@@ -210,3 +210,7 @@ Learner requested modest horizontal gutters, a girl adventurer, no desk sticky n
 This supersedes earlier statements that the two ending choices are display-only. At zero hearts, Try another run restores three hearts and closes the dialog. Explore a different direction presents “A new direction. Nothing you learned is lost.” and a Begin a new chapter button; confirmation restores three hearts and returns to the desk. Both preserve XP, weapon, reinforcement, collectibles, and all daily records. Each is one undoable, persisted action. A zero-heart player who dismissed the dialog can reopen it from Choose your next chapter. No separate game/map or data-erasing restart is added.
 
 The learner also requested brighter colors: retain the warm ivory base and strengthen meadow green, coral hearts, and honey-gold reward accents.
+
+## Offer Celebration and Compact Floating Status
+
+Learner requested a smaller main title, a compact floating full-width status bar, and an “I gooooot the offer!” button with celebration. Status is sticky above the content container with modest internal padding; the rest of the page retains its gutters. The gold offer button opens an accessible dialog with an original offer-letter illustration, star and confetti animation, and a close button. Escape closes it and focus returns to the trigger. Celebration is presentation-only: it does not add XP, change counts/hearts, reset progress, or alter the save. Respect reduced motion and disable the trigger during a boss encounter.

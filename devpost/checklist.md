@@ -88,3 +88,5 @@ Activity mode: To be recorded after the wrap-up.
 - Learner specified exact typography: self-host Fraunces for the main/dialog titles and DM Sans for interface copy; replacing provisional fonts and verifying loaded font faces.
 
 - Latest learner refinements implemented: modest gutters, shared girl sprite, note removed, manual-heartbreak feedback, and post-boss treasure chest opening with a weapon reveal. Twelve tests and production build passed. Browser verified the heart effect, opened chest/weapon name, exactly one interview reward, no note, matching avatar, mobile gutters/no overflow, and no page errors. Learner retry remains pending.
+
+- Browser comments requested the footer “❋ Every application is a step. Every interview is experience.” and a cuter status avatar. Replaced the status portrait with an original round-faced girl illustration; desk sprite and gameplay remain unchanged.

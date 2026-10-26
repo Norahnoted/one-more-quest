@@ -19,6 +19,6 @@ export default function App() {
     <DailyTracker daily={game.record.current.daily}/>
     <Collection collection={game.record.current.collection}/>
     <ReflectionDialog open={game.reflection} close={game.closeReflection}/>
-    <footer className="page-footer flex flex-wrap justify-between gap-3"><span>Not a race. Not a score. A record of showing up.</span><span>{game.warning ? 'Progress not saved' : 'Saved in this browser'} <span className="save-dot"/></span></footer>
+    <footer className="page-footer flex flex-wrap justify-between gap-3"><span>❋ Every application is a step. Every interview is experience.</span><span>{game.warning ? 'Progress not saved' : 'Saved in this browser'} <span className="save-dot"/></span></footer>
   </main>;
 }

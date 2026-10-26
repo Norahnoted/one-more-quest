@@ -42,3 +42,15 @@ test('boss rotation counts repeats without unbounded objects',()=>{
   assert.equal(Object.keys(record.current.collection).length,3);
   assert.equal(record.current.interviewsCompleted,4);
 });
+test('heartbreak is manually bounded and does not touch rewards or daily counts',()=>{
+  let record=transition(initialRecord(),'interview','2026-10-26');
+  const original=structuredClone(record.current);
+  for(let i=0;i<3;i++) record=transition(record,'heartbreak','2026-10-27');
+  assert.equal(record.current.hearts,0);
+  assert.equal(transition(record,'heartbreak'),record);
+  assert.equal(record.current.totalXp,original.totalXp);
+  assert.deepEqual(record.current.collection,original.collection);
+  assert.deepEqual(record.current.daily,original.daily);
+  const undo=transition(record,'undo');assert.equal(undo.current.hearts,1);
+  const continued=transition(record,'apply','2026-10-27');assert.equal(continued.current.hearts,0);assert.equal(continued.current.totalXp,40);
+});

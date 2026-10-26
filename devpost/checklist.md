@@ -19,7 +19,7 @@ Build mode: fast
   Learner check: Open the local app, apply enough times to level up, prepare, refresh, and undo; describe how the desk and visible growth compare with your intention.
   Commit: `Build persistent desk adventurer with application and preparation growth`
 
-- [ ] **2. Every interview becomes a rewarding stationery boss encounter**
+- [x] **2. Every interview becomes a rewarding stationery boss encounter**
   Becomes usable: Interview records complete rewards immediately, plays a short automatic battle, equips a weapon while keeping reinforcement, and grows the desktop collection.
   Why now: Adds the distinctive collectible reward loop on top of the already usable growth and persistence path.
   PRD ref: `prd.md > Interview Boss and Desktop Collection`, `Preparation and Equipment`, `States and Boundaries`, `Confirmed Interaction Boundaries`
@@ -73,3 +73,7 @@ Activity mode: To be recorded after the wrap-up.
 - Learner confirmed slice 1 functionality after revisions and requested continuing; final palette review remains pending. Nine tests and production build passed; browser checks covered daily counts, saved reinforcement, Undo, level-up/forge feedback, and mobile layout.
 
 - Slice 2 verification: 11 tests and production build passed. Browser verified four-second encounter, action locking, +30 XP, retained +2 reinforcement, collectible repeats, complete saved reward after mid-battle refresh, one-step Undo, and reduced-motion presentation; no page errors.
+
+- Production preview of a repository-style build must use the same BASE_PATH as the build; the initial preview used the root base and returned a missing script. README corrected and matching-path preview rechecked.
+
+- Slice 3 verification: all 12 tests passed. Browser verified third-heartbreak dialog, both reflective directions, Escape/close focus, zero-heart recording, no forced reopening on refresh, full heart Undo, reduced motion, and narrow layout. Production repository-path preview loaded assets and preserved XP with no failures. Browser storage write failure showed an unsaved warning; invalid saves remained intact and actions were blocked. Public deployment awaits shipping.

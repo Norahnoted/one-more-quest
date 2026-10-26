@@ -9,11 +9,15 @@ export function localDay(date = new Date()) {
 }
 export function transition(record, action, day = localDay()) {
   if (action === 'undo') return record.previous ? { ...record, current: structuredClone(record.previous), previous: null, lastAction: null } : record;
-  if (!['apply', 'prepare', 'interview'].includes(action)) return record;
+  if (!['apply', 'prepare', 'interview', 'heartbreak'].includes(action)) return record;
+  if (action === 'heartbreak' && record.current.hearts === 0) return record;
   const current = structuredClone(record.current);
   current.daily ??= {};
-  current.daily[day] ??= { apply: 0, prepare: 0, interview: 0 };
-  current.daily[day][action]++;
+  if (action !== 'heartbreak') {
+    current.daily[day] ??= { apply: 0, prepare: 0, interview: 0 };
+    current.daily[day][action]++;
+  }
+  if (action === 'heartbreak') current.hearts--;
   if (action === 'apply') current.totalXp += RULES.applicationXp;
   if (action === 'prepare') current.reinforcement++;
   if (action === 'interview') {

@@ -9,7 +9,7 @@ import Collection from './components/Collection.jsx';
 import ReflectionDialog from './components/ReflectionDialog.jsx';
 export default function App() {
   const game = useGame();
-  return <main className="app-shell mx-auto"><ProgressPanel progress={game.record.current}/><header className="page-header flex justify-between items-start gap-6"><div><p className="eyebrow edition">A SMALL ADVENTURE IN KEEPING GOING</p><h1>One More Quest<span className="title-star" aria-hidden="true">✳</span></h1><p className="subtitle">Your effort always leaves something behind.</p></div><div className="edition-stamp" aria-hidden="true">ONE<br/>MORE<br/><span>TRY.</span></div></header>
+  return <main className="app-shell mx-auto"><ProgressPanel progress={game.record.current}/><header className="page-header flex justify-between items-start gap-6"><div><p className="eyebrow edition">YOUR NEXT CHAPTER</p><h1>One More Quest<span className="title-star" aria-hidden="true">✧</span></h1><p className="subtitle">A little courage. A little progress. One more day.</p></div><div className="edition-stamp" aria-hidden="true">ONE<br/>MORE<br/><span>TRY.</span></div></header>
     <div className="action-intro flex justify-between items-center"><h2>What did you do today?</h2><span>Small steps count.</span></div>
     <ActionBar act={game.act} blocked={game.blocked || game.busy} busy={game.busy} hearts={game.record.current.hearts} canUndo={Boolean(game.record.previous)}/>
     <Feedback message={game.message} warning={game.warning}/>

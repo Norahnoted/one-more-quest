@@ -124,3 +124,5 @@ The learner requested and confirmed these changes during the first playable revi
 ## Final Visual Reference Revision
 
 The learner renamed the project One More Quest and supplied a previous design as reference only for the character status bar, typography, and colors. Use a compact avatar/name/level identity, XP bar with total XP, muted green text, warm ivory background, sage accents, dusty rose hearts, and a serif title with readable sans-serif interface text. Do not copy its other controls, content, integrations, or game design. The desk and approved interactions remain. This supersedes the earlier cherry-soda palette.
+
+Follow-up visual revision: remove outer horizontal gutters, use YOUR NEXT CHAPTER and One More Quest✧, tune title to a high-contrast serif treatment, and replace the reference-inspired avatar with an original pixel ranger. Subtitle currently uses the suggested wording “A little courage. A little progress. One more day.”; learner confirmation remains pending. Exact source font is not known from the screenshot; local Baskerville/Times fallbacks approximate its character.

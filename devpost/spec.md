@@ -197,3 +197,5 @@ Implementation files added within the approved component boundaries: `Stationery
 ## Final Visual Reference Revision
 
 Rename visible branding to One More Quest; keep the existing localStorage key to retain saves. Rebuild ProgressPanel with an original inline avatar, character name/level, current and total XP, and hearts. Reference the supplied image only for that status bar, typography, and ivory/sage/dusty-rose palette. Use Georgia for the main title and a readable local sans-serif stack for interface copy. Retain existing gameplay, desk scene, and application structure; add none of the reference app's unrelated features.
+
+Typography finalized by the learner: Fraunces for the main title and dialog titles; DM Sans for body copy, buttons, level/XP, and scene labels. Self-host variable font assets through Fontsource packages with their OFL licenses; replace the earlier provisional Baskerville/system-font approximation.

@@ -41,6 +41,6 @@ Show an application gaining XP, preparation strengthening the weapon, an automat
 
 A short demo video and the public GitHub repository are required submission materials. The playable Pages URL is additional. Record using a separate browser profile if you want a clean demonstration without changing your personal save.
 
-See `devpost/prd.md` and `devpost/spec.md` for requirements and implementation decisions. Rule values are centralized in `src/game.js`; the stationery catalog is in `src/catalog.js`. Artwork is original code-built SVG/CSS. No application forms, accounts, external fonts, or runtime API calls are required.
+See `devpost/prd.md` and `devpost/spec.md` for requirements and implementation decisions. Rule values are centralized in `src/game.js`; the stationery catalog is in `src/catalog.js`. Artwork is original code-built SVG/CSS. No application forms, accounts, or runtime API calls are required. Fraunces and DM Sans are bundled locally via Fontsource; their OFL licenses are included in the dependency packages.
 
 The internal save key retains the original project identifier so the rename to One More Quest preserves existing progress.

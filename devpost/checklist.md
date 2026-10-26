@@ -9,7 +9,7 @@ Build mode: fast
 
 ## Slices
 
-- [ ] **1. Applications and preparation visibly grow your desk adventurer**
+- [x] **1. Applications and preparation visibly grow your desk adventurer**
   Becomes usable: A running React pixel desk with an automatically wandering character, XP and level display, starter weapon, Apply and Prepare actions, saved progress, and one-step Undo.
   Why now: Delivers the central effort-to-growth loop early and gives the learner a real visual direction to react to before combat is added.
   PRD ref: `prd.md > The Core Journey`, `Applications and Character Levels`, `Preparation and Equipment`, `Saved Progress and Undo`, `Look and Feel`
@@ -71,3 +71,5 @@ Activity mode: To be recorded after the wrap-up.
 - Early learner feedback added daily action counts, a separate weapon panel, level-up/forge feedback, and a cherry-soda visual revision. PRD and spec updated; original professional-tracker exclusions remain intact.
 
 - Learner confirmed slice 1 functionality after revisions and requested continuing; final palette review remains pending. Nine tests and production build passed; browser checks covered daily counts, saved reinforcement, Undo, level-up/forge feedback, and mobile layout.
+
+- Slice 2 verification: 11 tests and production build passed. Browser verified four-second encounter, action locking, +30 XP, retained +2 reinforcement, collectible repeats, complete saved reward after mid-battle refresh, one-step Undo, and reduced-motion presentation; no page errors.

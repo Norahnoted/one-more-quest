@@ -15,6 +15,6 @@ Open http://127.0.0.1:5173. For production checks, run `npm run build` followed 
 
 ## Current build
 
-Applications earn 10 XP; every 100 XP advances one level. Preparation adds one weapon reinforcement. Progress and a one-step Undo survive refresh. Interview encounters and manual heartbreaks are upcoming build slices, clearly disabled in this version.
+Applications earn 10 XP; every 100 XP advances one level. Preparation adds one weapon reinforcement. Progress and a one-step Undo survive refresh. Interviews grant 30 XP, an automatically equipped weapon, and a stationery keepsake. A four-second automatic encounter celebrates the action; rewards save before animation. Manual heartbreaks are the remaining build slice. Daily counters follow your local calendar date.
 
 Saves belong to this browser and site origin. Clearing site data removes them; local and published versions have separate saves. No job-search details or credentials are requested.

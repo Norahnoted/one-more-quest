@@ -1,0 +1,5 @@
+export default function Stationery({ id, className='' }) {
+  return <svg className={`stationery ${className}`} viewBox="0 0 48 40" shapeRendering="crispEdges" aria-hidden="true">
+    {id === 'eraser' ? <><path d="M7 8h32v5h5v20H4V13h3z" fill="#d17794"/><path d="M7 8h18v25H4V13h3z" fill="#f8d4df"/><path d="M4 29h40v5H4z" fill="#b85b7c"/><path d="M25 8h14v5h5v16H25z" fill="#98abc2"/><path d="M11 17h4v4h-4zm19 0h4v4h-4z" fill="#654958"/><path d="M19 24h7v3h-7z" fill="#654958"/></> : id === 'stapler' ? <><path d="M4 29h39v7H4z" fill="#856775"/><path d="M6 25h31v5H6z" fill="#d6c8cb"/><path d="M5 7h32v5h5v12H9v-5H5z" fill="#91ada5"/><path d="M9 7h28v5H9z" fill="#bdd5c6"/><path d="M12 17h4v4h-4zm16 0h4v4h-4z" fill="#3f5b53"/><path d="M17 24h9v3h-9z" fill="#3f5b53"/></> : <><path d="M8 5h30v5h5v25H4V10h4z" fill="#e7b96f"/><path d="M8 5h30v6H8z" fill="#f7d597"/><path d="M30 11h13v24H30z" fill="#bc8d57"/><path d="M14 14h15v14H14z" fill="#80675d"/><path d="M18 18h7v6h-7z" fill="#d0bda4"/><path d="M8 30h4v3H8zm24 0h4v3h-4z" fill="#81594d"/></>}
+  </svg>;
+}

@@ -1,10 +1,12 @@
+import Stationery from './Stationery.jsx';
+import { CATALOG } from '../catalog.js';
 const pixels = [
 '....hhhhhh......','...hhhhhhhh.....','...hsssphhh.....','...hsssssh......','....ssssss......','.....ssss.......','....gggggg......','...gggggggg.....','...sggggggs.....','...sggggggs.....','....gggggg......','....pppppp......','....pp..pp......','....pp..pp......','...bbb..bbb.....',
 ];
 const colors = { h:'#443b34',s:'#e7b48a',p:'#4d5149',g:'#73856c',b:'#423d33' };
 function Character() { return <svg viewBox="0 0 16 16" className="character-sprite" aria-hidden="true" shapeRendering="crispEdges">{pixels.flatMap((row,y)=>[...row].map((p,x)=>colors[p] ? <rect key={`${x}-${y}`} x={x} y={y} width="1" height="1" fill={colors[p]}/> : null))}<rect x="14" y="7" width="1" height="7" fill="#a7774f"/><rect x="12" y="10" width="4" height="1" fill="#65523b"/></svg>; }
-export default function DeskScene({ effect }) {
-  return <section className="desk-scene" aria-label="A pixel adventurer wandering on a quiet Japanese-inspired desk">
+export default function DeskScene({ effect, encounter, collection = {} }) {
+  return <section className={`desk-scene ${encounter ? `in-battle phase-${encounter.phase}` : ''}`} aria-label="A pixel adventurer wandering on a quiet Japanese-inspired desk">
     <div className="scene-heading"><span className="scene-dot"/> YOUR LITTLE CORNER OF THE WORLD</div>
     <svg className="room-art" viewBox="0 0 960 410" preserveAspectRatio="xMidYMid slice" aria-hidden="true" shapeRendering="crispEdges">
       <defs><pattern id="wood" width="180" height="42" patternUnits="userSpaceOnUse"><rect width="180" height="42" fill="#d4b98e"/><path d="M0 41h180M18 13h42m48 13h55M3 30h31" stroke="#c5a779" strokeWidth="2"/><path d="M80 0v42" stroke="#c7ac81"/></pattern></defs>
@@ -18,8 +20,10 @@ export default function DeskScene({ effect }) {
       <path d="M764 274h45v33h-45z" fill="#efe9d7"/><path d="M809 280h13v18h-13" fill="none" stroke="#efe9d7" strokeWidth="5"/><path d="M770 275h33v5h-33z" fill="#7d6750"/><rect x="756" y="310" width="65" height="5" fill="#b39975"/>
       <path d="M424 354h123v5H424z" fill="#b69b73"/><rect x="425" y="349" width="108" height="5" fill="#dfbd77"/><path d="M533 349h13v5h-13z" fill="#5b6557"/>
     </svg>
-    {effect && <div key={effect.id} className={`scene-reward effect-${effect.type}`} role="status">{effect.type === 'level' ? `Level Up! · Level ${effect.level}` : effect.type === 'apply' ? '+10 XP' : 'Weapon reinforced +1'}</div>}
+    {effect && <div key={effect.id} className={`scene-reward effect-${effect.type}`} role="status">{effect.type === 'level' ? `Level Up! · Level ${effect.level}` : effect.type === 'apply' ? '+10 XP' : effect.type === 'interview' ? 'Interview complete! +30 XP' : 'Weapon reinforced +1'}</div>}
     <div className={`character-wander ${effect?.type === 'level' ? 'level-up' : ''}`}><div className="character-bob"><Character/></div><div className="character-shadow"/></div>
+    {encounter && <><div className="boss-label">{encounter.phase === 'stars' ? 'YOU SHOWED UP.' : encounter.boss.name.toUpperCase()}</div><div className={`boss-sprite boss-${encounter.phase}`}><Stationery id={encounter.boss.id}/></div>{encounter.phase === 'stars' && <div className="battle-stars" aria-hidden="true">✦ · ✧ · ✦</div>}</>}
+    <div className="desk-collectibles" aria-hidden="true">{CATALOG.filter(b=>collection[b.id]).map(b=><div className="desk-collectible" key={b.id}><Stationery id={b.id}/><span>×{collection[b.id]}</span></div>)}</div>
     <div className="scene-note"><span className="note-cross">+</span><p>Good things take little steps.</p><span>There is no rush here.</span></div>
     <div className="scene-footer"><span>DESK 01 / A NEW BEGINNING</span><span>AUTOMATIC WANDERING <i/></span></div>
   </section>;

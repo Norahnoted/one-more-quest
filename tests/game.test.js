@@ -26,3 +26,19 @@ test('daily counts separate dates and undo restores the original day',()=>{
   assert.deepEqual(b.current.daily['2026-10-27'],{apply:0,prepare:1,interview:0});
   assert.deepEqual(transition(b,'undo').current,a.current);
 });
+test('interviews grant complete rewards and preserve reinforcement, undo restores everything',()=>{
+  const prepared=transition(transition(initialRecord(),'prepare'),'prepare');
+  const interviewed=transition(prepared,'interview','2026-10-26');
+  assert.equal(interviewed.current.totalXp,30);
+  assert.equal(interviewed.current.weaponId,'eraser');
+  assert.equal(interviewed.current.reinforcement,2);
+  assert.equal(interviewed.current.collection.eraser,1);
+  assert.equal(interviewed.current.daily['2026-10-26'].interview,1);
+  assert.deepEqual(transition(interviewed,'undo').current,prepared.current);
+});
+test('boss rotation counts repeats without unbounded objects',()=>{
+  let record=initialRecord();for(let i=0;i<4;i++) record=transition(record,'interview');
+  assert.equal(record.current.collection.eraser,2);
+  assert.equal(Object.keys(record.current.collection).length,3);
+  assert.equal(record.current.interviewsCompleted,4);
+});

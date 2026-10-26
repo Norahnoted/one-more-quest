@@ -8,6 +8,7 @@ export function useGame() {
   const latest = useRef(loaded.record);
   const [warning, setWarning] = useState(loaded.warning);
   const [message, setMessage] = useState('A little effort. A little further.');
+  const [tone, setTone] = useState('growth');
   const [effect, setEffect] = useState(null);
   const [encounter, setEncounter] = useState(null);
   const [reward, setReward] = useState(null);
@@ -24,6 +25,7 @@ export function useGame() {
     const next = transition(before, action);
     if (next === before) return;
     clearTimers();
+    setTone(action === 'heartbreak' ? 'heartbreak' : 'growth');
     setReward(null);
     if (['undo','retry','different'].includes(action)) setReflection(false);
     if (action === 'heartbreak' && next.current.hearts === 0) setReflection(true);
@@ -54,8 +56,8 @@ export function useGame() {
       },reduced ? 600 : 4900);
     } else {
       showEffect();
-      setMessage(action === 'apply' ? '+10 XP · One more door knocked on.' : action === 'prepare' ? `Weapon reinforced to +${next.current.reinforcement}. You are getting ready.` : action === 'heartbreak' ? 'A hard moment, not a measure of your worth. Your progress is still here.' : action === 'retry' ? 'Three hearts, one more try. Everything you earned stays with you.' : action === 'different' ? 'A new direction. Nothing you learned is lost. Three hearts restored.' : 'Last action undone. Your progress is restored.');
+      setMessage(action === 'apply' ? '+10 XP · One more door knocked on.' : action === 'prepare' ? `Weapon reinforced to +${next.current.reinforcement}. You are getting ready.` : action === 'heartbreak' ? (next.current.hearts > 0 ? `That’s okay. Just a little setback. ${next.current.hearts} ${next.current.hearts === 1 ? 'heart' : 'hearts'} left. Give yourself one more chance before you decide to stop.` : 'That’s okay. Three hard moments do not erase your progress. Take a breath, then choose what comes next.') : action === 'retry' ? 'Three hearts, one more try. Everything you earned stays with you.' : action === 'different' ? 'A new direction. Nothing you learned is lost. Three hearts restored.' : 'Last action undone. Your progress is restored.');
     }
   }
-  return { record, warning, message, effect, encounter, reward, reflection, openReflection:()=>setReflection(true), closeReflection:()=>setReflection(false), dismissReward:()=>setReward(null), act, busy:Boolean(encounter), blocked:loaded.blocked };
+  return { record, warning, message, tone, effect, encounter, reward, reflection, openReflection:()=>setReflection(true), closeReflection:()=>setReflection(false), dismissReward:()=>setReward(null), act, busy:Boolean(encounter), blocked:loaded.blocked };
 }

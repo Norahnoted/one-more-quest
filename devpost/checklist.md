@@ -92,3 +92,5 @@ Activity mode: To be recorded after the wrap-up.
 - Browser comments requested the footer “❋ Every application is a step. Every interview is experience.” and a cuter status avatar. Replaced the status portrait with an original round-faced girl illustration; desk sprite and gameplay remain unchanged.
 
 - Learner approved brighter colors and actionable ending choices. Added persisted, undoable heart restoration for retry/different path, a clear confirmation for the different path, and a zero-heart reopen control. Fourteen tests/build passed; browser confirmed both exits, complete progress preservation, saved hearts after refresh, Undo/reopen, no page errors, and no mobile overflow. Learner retry remains pending.
+
+- Browser review refinements: subtitle ends with One more chance.; removed both desk footer labels; changed manual heartbreak control to I’m feeling discouraged with a distinct button treatment; coral feedback gives a gentle setback message and remaining-heart context; enlarged section spacing. Production build and mobile browser checks passed; emotional and growth message backgrounds differ.

@@ -139,3 +139,7 @@ Learner requested modest horizontal gutters, a girl adventurer, no desk sticky n
 This supersedes earlier statements that the two ending choices are display-only. At zero hearts, Try another run restores three hearts and closes the dialog. Explore a different direction presents “A new direction. Nothing you learned is lost.” and a Begin a new chapter button; confirmation restores three hearts and returns to the desk. Both preserve XP, weapon, reinforcement, collectibles, and all daily records. Each is one undoable, persisted action. A zero-heart player who dismissed the dialog can reopen it from Choose your next chapter. No separate game/map or data-erasing restart is added.
 
 The learner also requested brighter colors: retain the warm ivory base and strengthen meadow green, coral hearts, and honey-gold reward accents.
+
+## Emotional Feedback and Spacing Revision
+
+Subtitle: “A little courage. A little progress. One more chance.” Remove desk footer metadata. The manual heartbreak control is labeled “I’m feeling discouraged” with a distinct button treatment rather than a like-style heart icon. Its tooltip explains that it marks one heartbreak. Use coral-toned feedback separate from green growth feedback; acknowledge a small setback and the remaining chances without forcing a decision. At zero, encourage reflection on the next chapter. Add generous section and panel spacing while retaining mobile usability.

@@ -36,6 +36,5 @@ export default function DeskScene({ effect, encounter, collection = {}, weaponId
     <div className={`character-wander ${effect?.type === 'level' ? 'level-up' : ''}`}><div className="character-bob"><Character weaponId={weaponId}/></div><div className="character-shadow"/></div>
     {encounter && <><div className="boss-label">{['stars','chest','open'].includes(encounter.phase) ? 'YOU SHOWED UP.' : encounter.boss.name.toUpperCase()}</div>{['approach','strike','stars'].includes(encounter.phase) && <div className={`boss-sprite boss-${encounter.phase}`}><Stationery id={encounter.boss.id}/></div>}{['chest','open'].includes(encounter.phase) && <TreasureChest boss={encounter.boss} open={encounter.phase === 'open'}/>}{encounter.phase === 'stars' && <div className="battle-stars" aria-hidden="true">✦ · ✧ · ✦</div>}</>}
     <div className="desk-collectibles" aria-hidden="true">{CATALOG.filter(b=>collection[b.id]).map(b=><div className="desk-collectible" key={b.id}><Stationery id={b.id}/><span>×{collection[b.id]}</span></div>)}</div>
-    <div className="scene-footer"><span>DESK 01 / A NEW BEGINNING</span><span>AUTOMATIC WANDERING <i/></span></div>
   </section>;
 }

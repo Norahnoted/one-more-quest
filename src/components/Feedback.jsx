@@ -1,5 +1,5 @@
-export default function Feedback({ message, warning }) {
-  return <><p className="feedback" role="status" aria-live="polite"><span aria-hidden="true">✦</span> {message}</p>{warning && <p className="save-warning" role="alert">{warning}</p>}</>;
+export default function Feedback({ message, warning, tone }) {
+  return <><p className={`feedback ${tone === 'heartbreak' ? 'feedback-heartbreak' : ''}`} role="status" aria-live="polite"><span aria-hidden="true">{tone === 'heartbreak' ? '☁' : '✦'}</span> {message}</p>{warning && <p className="save-warning" role="alert">{warning}</p>}</>;
 }
 
 export function RewardCard({ boss, dismiss }) {

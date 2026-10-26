@@ -54,3 +54,14 @@ test('heartbreak is manually bounded and does not touch rewards or daily counts'
   const undo=transition(record,'undo');assert.equal(undo.current.hearts,1);
   const continued=transition(record,'apply','2026-10-27');assert.equal(continued.current.hearts,0);assert.equal(continued.current.totalXp,40);
 });
+test('either next chapter restores hearts and preserves all earned progress, with Undo',()=>{
+  let original=transition(transition(initialRecord(),'prepare'),'interview','2026-10-26');
+  for(let i=0;i<3;i++) original=transition(original,'heartbreak');
+  for(const action of ['retry','different']) {
+    const next=transition(original,action,'2026-10-27');
+    assert.equal(next.current.hearts,3);
+    assert.deepEqual({...next.current,hearts:0},original.current);
+    assert.deepEqual(transition(next,'undo').current,original.current);
+    assert.equal(transition(next,action),next);
+  }
+});

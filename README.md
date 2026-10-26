@@ -37,7 +37,7 @@ Open `http://127.0.0.1:4173/one-more-quest/`. For a normal local build, omit BAS
 
 ## Demo and behavior checks
 
-Show an application gaining XP, preparation strengthening the weapon, an automatic interview with a stationery reward, and daily counts. Mark three heartbreaks, read the open ending, close it, and continue. Use Undo to reverse the most recent action. The reflection choices are possibilities for a future chapter; they intentionally do not restart the game or navigate away.
+Show an application gaining XP, preparation strengthening the weapon, an automatic interview with a stationery reward, and daily counts. Mark three heartbreaks, read the open ending, close it, and continue. Use Undo to reverse the most recent action. Try another run restores three hearts immediately. Explore a different direction offers a Begin a new chapter confirmation. Both preserve all earned progress and daily counts, save immediately, and can be undone. At zero hearts, Choose your next chapter reopens a dismissed dialog.
 
 A short demo video and the public GitHub repository are required submission materials. The playable Pages URL is additional. Record using a separate browser profile if you want a clean demonstration without changing your personal save.
 

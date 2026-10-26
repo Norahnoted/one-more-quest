@@ -15,7 +15,7 @@ function validProgress(p) {
 }
 export function validRecord(r) {
   return r?.version === 1 && validProgress(r.current) && (r.previous === null || validProgress(r.previous))
-    && (r.previous === null ? r.lastAction === null : ['apply','prepare','interview','heartbreak'].includes(r.lastAction));
+    && (r.previous === null ? r.lastAction === null : ['apply','prepare','interview','heartbreak','retry','different'].includes(r.lastAction));
 }
 export function loadSave(getStorage = () => window.localStorage) {
   try {

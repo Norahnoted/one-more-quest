@@ -25,11 +25,11 @@ export function useGame() {
     if (next === before) return;
     clearTimers();
     setReward(null);
-    if (action === 'undo') setReflection(false);
+    if (['undo','retry','different'].includes(action)) setReflection(false);
     if (action === 'heartbreak' && next.current.hearts === 0) setReflection(true);
     const levelUp = levelOf(next.current.totalXp) > levelOf(before.current.totalXp);
     const showEffect = () => {
-      setEffect(action === 'undo' ? null : { id: ++sequence.current, type: levelUp ? 'level' : action, level: levelOf(next.current.totalXp) });
+      setEffect(action === 'undo' ? null : { id: ++sequence.current, type: levelUp ? 'level' : ['retry','different'].includes(action) ? 'chapter' : action, level: levelOf(next.current.totalXp) });
       later(() => setEffect(null),2200);
     };
     latest.current = next;
@@ -54,8 +54,8 @@ export function useGame() {
       },reduced ? 600 : 4900);
     } else {
       showEffect();
-      setMessage(action === 'apply' ? '+10 XP · One more door knocked on.' : action === 'prepare' ? `Weapon reinforced to +${next.current.reinforcement}. You are getting ready.` : action === 'heartbreak' ? 'A hard moment, not a measure of your worth. Your progress is still here.' : 'Last action undone. Your progress is restored.');
+      setMessage(action === 'apply' ? '+10 XP · One more door knocked on.' : action === 'prepare' ? `Weapon reinforced to +${next.current.reinforcement}. You are getting ready.` : action === 'heartbreak' ? 'A hard moment, not a measure of your worth. Your progress is still here.' : action === 'retry' ? 'Three hearts, one more try. Everything you earned stays with you.' : action === 'different' ? 'A new direction. Nothing you learned is lost. Three hearts restored.' : 'Last action undone. Your progress is restored.');
     }
   }
-  return { record, warning, message, effect, encounter, reward, reflection, closeReflection:()=>setReflection(false), dismissReward:()=>setReward(null), act, busy:Boolean(encounter), blocked:loaded.blocked };
+  return { record, warning, message, effect, encounter, reward, reflection, openReflection:()=>setReflection(true), closeReflection:()=>setReflection(false), dismissReward:()=>setReward(null), act, busy:Boolean(encounter), blocked:loaded.blocked };
 }

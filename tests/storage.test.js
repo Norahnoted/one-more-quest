@@ -38,3 +38,14 @@ test('invalid daily counters cannot overwrite existing data',()=>{
   const record=initialRecord();record.current.daily={'2026-10-26':{apply:-1,prepare:0,interview:0}};
   assert.equal(loadSave(()=>memory(JSON.stringify(record))).blocked,true);
 });
+test('chapter choices and their undo snapshot survive reload',()=>{
+  let record=initialRecord();for(let i=0;i<3;i++)record=transition(record,'heartbreak');
+  for(const action of ['retry','different']) {
+    const storage=memory();const chosen=transition(record,action);
+    saveRecord(chosen,()=>storage);
+    const loaded=loadSave(()=>storage);
+    assert.equal(loaded.blocked,false);
+    assert.equal(loaded.record.current.hearts,3);
+    assert.equal(transition(loaded.record,'undo').current.hearts,0);
+  }
+});

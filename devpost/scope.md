@@ -52,3 +52,10 @@ This loop should be demonstrable in approximately one minute. The curriculum's f
 
 - Company, role, and preparation-detail forms or professional application workflow management: the creator explicitly requested one-click logging and already has a separate job tracker.
 - Complex maps and controls: the intended experience is a lightweight idle tracker with automatic character movement.
+
+
+## Approved Chapter Continuation Update
+
+This supersedes earlier statements that the two ending choices are display-only. At zero hearts, Try another run restores three hearts and closes the dialog. Explore a different direction presents “A new direction. Nothing you learned is lost.” and a Begin a new chapter button; confirmation restores three hearts and returns to the desk. Both preserve XP, weapon, reinforcement, collectibles, and all daily records. Each is one undoable, persisted action. A zero-heart player who dismissed the dialog can reopen it from Choose your next chapter. No separate game/map or data-erasing restart is added.
+
+The learner also requested brighter colors: retain the warm ivory base and strengthen meadow green, coral hearts, and honey-gold reward accents.

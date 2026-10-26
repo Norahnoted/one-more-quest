@@ -90,3 +90,5 @@ Activity mode: To be recorded after the wrap-up.
 - Latest learner refinements implemented: modest gutters, shared girl sprite, note removed, manual-heartbreak feedback, and post-boss treasure chest opening with a weapon reveal. Twelve tests and production build passed. Browser verified the heart effect, opened chest/weapon name, exactly one interview reward, no note, matching avatar, mobile gutters/no overflow, and no page errors. Learner retry remains pending.
 
 - Browser comments requested the footer “❋ Every application is a step. Every interview is experience.” and a cuter status avatar. Replaced the status portrait with an original round-faced girl illustration; desk sprite and gameplay remain unchanged.
+
+- Learner approved brighter colors and actionable ending choices. Added persisted, undoable heart restoration for retry/different path, a clear confirmation for the different path, and a zero-heart reopen control. Fourteen tests/build passed; browser confirmed both exits, complete progress preservation, saved hearts after refresh, Undo/reopen, no page errors, and no mobile overflow. Learner retry remains pending.
